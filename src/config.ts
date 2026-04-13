@@ -32,6 +32,30 @@ Do NOT use for password checking -- use security_check_password instead. Do NOT 
         },
         required: ["json"],
       },
+      outputSchema: {
+        type: "object",
+        properties: {
+          valid: { type: "boolean", description: "Whether JSON is valid (syntax + schema if provided)" },
+          syntaxValid: { type: "boolean", description: "Whether JSON syntax is correct" },
+          schemaValid: { type: "boolean", description: "Whether JSON matches the provided schema" },
+          schemaProvided: { type: "boolean", description: "Whether a schema was provided for validation" },
+          parsed: { type: "string", description: "Pretty-printed formatted JSON string" },
+          stats: {
+            type: "object",
+            description: "Structure statistics",
+            properties: {
+              depth: { type: "number", description: "Maximum nesting depth" },
+              totalKeys: { type: "number", description: "Total number of object keys" },
+              totalArrays: { type: "number", description: "Total number of arrays" },
+              totalObjects: { type: "number", description: "Total number of objects" },
+              totalValues: { type: "number", description: "Total number of values" },
+              sizeBytes: { type: "number", description: "Size in bytes" },
+              sizeFormatted: { type: "string", description: "Human-readable size (e.g. 1.2 KB)" },
+            },
+          },
+        },
+        required: ["valid", "syntaxValid"],
+      },
     },
   ],
 };
