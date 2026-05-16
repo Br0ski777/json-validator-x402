@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://json-validator-x402-production.up.railway.app/mcp"
+      "url": "https://json-validator.api.klymax402.com/mcp"
     }
   ]
 }
