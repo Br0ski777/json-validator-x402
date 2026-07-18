@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/validate",
-      price: "$0.001",
+      price: "$0.003",
       description: "Validate JSON and optionally check against a JSON Schema",
       toolName: "data_validate_json",
       toolDescription: "Use this when you need to validate JSON syntax or validate JSON data against a JSON Schema. Returns validity status, parse errors, formatted JSON, and structure stats (depth, key count, arrays, total size). Do NOT use for password checking — use security_check_password. Do NOT use for hash generation — use crypto_generate_hash. Do NOT use for cron expressions — use util_parse_cron.",
