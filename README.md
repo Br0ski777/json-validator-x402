@@ -37,7 +37,7 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `data_validate_json` | POST | `/api/validate` | $0.001 | Validate JSON and optionally check against a JSON Schema |
+| `data_validate_json` | POST | `/api/validate` | $0.003 | Validate JSON and optionally check against a JSON Schema |
 
 ### `data_validate_json`
 
